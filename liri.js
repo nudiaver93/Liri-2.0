@@ -69,29 +69,24 @@ function showMovie(movieTitle) {
 				console.log("\nPlot: " + JSON.parse(body) ["Plot"]);
 				console.log("\nIMDB Rating: " + JSON.parse(body) ["imdbRating"]);
 				console.log();
-				fs.appendFile('log.txt', "\nOMDB Log" + "\nTitle: " + JSON.parse(body) ["Title"] + "\nYear: " + JSON.parse(body) ["Year"] + "\nActors: " + JSON.parse(body) ["Actors"] + "\nPlot: " + JSON.parse(body) ["Plot"] + "\nIMDB Rating: " + JSON.parse(body) ["imdbRating"]);
+				fs.appendFile('log.txt', "\nOMDB Log" + "\nTitle: " + JSON.parse(body) ["Title"] + "\nYear: " + JSON.parse(body) ["Year"] + "\nActors: " + JSON.parse(body) ["Actors"] + "\nPlot: " + JSON.parse(body) ["Plot"] + "\nIMDB Rating: " + JSON.parse(body) ["imdbRating"] "\n");
 			} 
 		});
 	}; 
-/*
-// Weather functionality
-function showWeather() {
-		if(process.argv[3] === undefined) {
-			var zip = '78705';
-		}
-		else {
-			var zip = process.argv[3];
-		};
 
+// Weather functionality
+function showWeather(zip) {
 	weather.find({search: zip, degreeType: 'F'}, function(err, result) {
 		if (err) {
 			console.log(err);
 		}
+		// Make the response 
 		var response = JSON.stringify(result[0]["forecast"], null, 2);
-		console.log(result);
+		console.log(response);
+		fs.appendFile('log.txt', "\nWeather log" + "\nForcast in " + zip + "\n" + response + "\n")
 	})
 
-} */
+} 
 
 console.log("Hello, and welcome to LIRI.")
 console.log("===========================")
@@ -119,6 +114,14 @@ inquirer.prompt([
 	when: function(answers) {
 		return answers.choice === "Movie";
 	}
+}, 
+{
+	type: "input",
+	message: "What zip code you would like to look up weather information for?",
+	name: "zip",
+	when: function(answers) {
+		return answers.choice === "Weather";
+	}
 }
 ]).then(function (user) {
 	switch (user.choice) {
@@ -127,6 +130,9 @@ inquirer.prompt([
 			break;
 		case ("Movie"):
 			showMovie(user.movieTitle);
+			break;
+		case ("Weather"):
+			showWeather(user.zip);
 			break;
 	};
 });
