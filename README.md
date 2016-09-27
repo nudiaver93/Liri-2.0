@@ -1,0 +1,2 @@
+# Liri-2.0
+This is the upgraded version of a language-oriented node application ran from the console that I am working on. The original assignment was a simple Node application that read arguments and responded with certain functions. This variation is more of a mature Node application with added functionality that is more interactive with the user.  I still need to clean callback functions and incorporate a Hangman game into this.  
