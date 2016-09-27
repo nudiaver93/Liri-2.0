@@ -1,0 +1,13 @@
+
+Spotify Log
+Artist:The Weeknd
+Song Name:Starboy
+Album NameStarboy
+Preview Link:https://p.scdn.co/mp3-preview/8bc809d4e17a94526ff189e89dde0decc774a639
+
+OMDB Log
+Title: Suicide Squad
+Year: 2016
+Actors: Will Smith, Jaime FitzSimons, Ike Barinholtz, Margot Robbie
+Plot: A secret government agency recruits some of the most dangerous incarcerated criminals to form a defensive task force, with their first case leading to a potential apocalypse.
+IMDB Rating: 6.7

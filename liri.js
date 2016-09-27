@@ -48,29 +48,28 @@ function showSong(song) {
 			return;
 		} 
 		else{
-			console.log("Song Name:" + data.tracks.items[0].name);
-			console.log("Artist:" + data.tracks.items[0].artists[0].name);
-			console.log("Album:" + data.tracks.items[0].album.name);
-			console.log("Preview Link:" + data.tracks.items[0].preview_url);
-			fs.appendFile('random.txt', "Artist:" + data.tracks.items[0].artists[0].name + "\n" + "Song Name:" + data.tracks.items[0].name + "\n" + "Album Name" + data.tracks.items[0].album.name + "\n" + "Preview Link:" + data.tracks.items[0].preview_url+ "\n");
+			console.log("\nSong Name:" + data.tracks.items[0].name);
+			console.log("\nArtist:" + data.tracks.items[0].artists[0].name);
+			console.log("\nAlbum:" + data.tracks.items[0].album.name);
+			console.log("\nPreview Link:" + data.tracks.items[0].preview_url);
+			console.log();
+			fs.appendFile('log.txt', "\nSpotify Log" + "\nArtist:" + data.tracks.items[0].artists[0].name + "\n" + "Song Name:" + data.tracks.items[0].name + "\n" + "Album Name" + data.tracks.items[0].album.name + "\n" + "Preview Link:" + data.tracks.items[0].preview_url+ "\n");
 		}
 	})
 }; 
 
 // OMDB Functionality 
-
 function showMovie(movieTitle) {
 	var OMDB = 'http://www.omdbapi.com/?t=' + movieTitle +'&y=&plot=long&tomatoes=true&r=json';
 		request(OMDB, function(error, response, body) {
 			if (!error && response.statusCode == 200) {
-				console.log("Title:" + JSON.parse(body) ["Title"]);
-				console.log("\nYear:" + JSON.parse(body) ["Year"]);
-				console.log("\nIMDB Rating:" + JSON.parse(body) ["imdbRating"]);
-				console.log("\nCountry:" + JSON.parse(body) ["Country"]);
-				console.log("\nLanguage:" + JSON.parse(body) ["Language"]);
-				console.log("\nPlot:" + JSON.parse(body) ["Plot"]);
-				console.log("\nActors:" + JSON.parse(body) ["Actors"]);
-				console.log("\nRotten Tomatoes Rating:" + JSON.parse(body) ["rottenTomatoesRating"]);
+				console.log("\nTitle: " + JSON.parse(body) ["Title"]);
+				console.log("\nYear: " + JSON.parse(body) ["Year"]);
+				console.log("\nActors: " + JSON.parse(body) ["Actors"]);
+				console.log("\nPlot: " + JSON.parse(body) ["Plot"]);
+				console.log("\nIMDB Rating: " + JSON.parse(body) ["imdbRating"]);
+				console.log();
+				fs.appendFile('log.txt', "\nOMDB Log" + "\nTitle: " + JSON.parse(body) ["Title"] + "\nYear: " + JSON.parse(body) ["Year"] + "\nActors: " + JSON.parse(body) ["Actors"] + "\nPlot: " + JSON.parse(body) ["Plot"] + "\nIMDB Rating: " + JSON.parse(body) ["imdbRating"]);
 			} 
 		});
 	}; 
@@ -99,50 +98,35 @@ console.log("===========================")
 inquirer.prompt([
 {
 	type: "list",
-	message: "What would you like to look up?",
+	message: "What app would you like to use?",
 	choices: ["Spotify", "Twitter", "Movie", "Weather", "I want to play a game instead."], 
 	name: "choice"
 
-}]).then(function (user) {
-	switch (user.choice) {
-		case "Twitter":
-			inquirer.pronpt([
-			{
-				type: "input",
-				message: "What movie would you like to look up?",
-				name: "movieTitle"
-			}]).then(function (user) {
-				showMovie(user.movieTitle);
-			});
-			break;
-	}
-	/*
-	if (user.choice === "Spotify") {
-		inquirer.prompt([
-		{
-			type: "input",
-			message: "What song would you like to look up?",
-			name: "song",
-		}]).then(function(user) {
-			showSong(user.song);
-		});
-	*/
-	/*if (user.choice === "Twitter") {
-		inquirer.prompt([
-		{
-			type: "input",
-			message: "What is the Twitter Handle you would like to look up?",
-			name: "twitterHandle"
-		},
+},
 
-		{
-			type: "list",
-			message: "How many tweets would you like to look up?",
-			choices: ["5", "10", "25", "50"],
-			name: "count"
-		}]).then(function(user){
-			var count = parseInt[user.count];
-			showTweets(user.twitterHandle, count);
-		});*/
-		
+{
+	type: "input",
+	message: "What song would you like to look up?",
+	name: "songTitle",
+	when: function(answers){
+		return answers.choice === "Spotify";
+	}
+},
+{
+	type: "input",
+	message: "What movie would you like to look up?",
+	name: "movieTitle",
+	when: function(answers) {
+		return answers.choice === "Movie";
+	}
+}
+]).then(function (user) {
+	switch (user.choice) {
+		case ("Spotify"):
+			showSong(user.songTitle);
+			break;
+		case ("Movie"):
+			showMovie(user.movieTitle);
+			break;
+	};
 });
