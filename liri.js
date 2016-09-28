@@ -14,7 +14,7 @@ var request = require('request');
 var inquirer = require('inquirer');
 
 // Twitter functionality
-function showTweets(twitterHandle, count){
+function postTweet(newTweet){
 		var user = new Twitter({
 			consumer_key: keys.twitterKeys.consumer_key,
 			consumer_secret:  keys.twitterKeys.consumer_secret,
@@ -22,19 +22,10 @@ function showTweets(twitterHandle, count){
   			access_token_secret: keys.twitterKeys.access_token_secret
   		});
 
-  	user.get("statuses/user_timeline", {twitterHandle: twitterHandle, count: count}, function(error, tweets, response){
-  		if (!error && response.statusCode == 200) {
-  			for(var i = 0; i < tweets.length; i++){
-  				console.log(twitterHandle);
-  				console.log("Tweet: " + tweets[i].text + "\nDate: " + tweets[i].created_at);
-  				console.log('\n');
-
-  			}
-  		} 
-  		else {
-  			console.log(error);
-  		}
-  	});
+  		user.post('statuses/update', {status: newTweet}, function(error, tweet, response){
+  			if (error) throw error;
+  			console.log("\nYour tweet '" + newTweet + "' was successfully posted on " + tweet["created_at"].substr(0, 11) + tweet["created_at"].substr(26, 4) + " " + tweet["created_at"].substr(11, 9));
+  		})
  };
 
 // Spotify functionality
@@ -69,7 +60,7 @@ function showMovie(movieTitle) {
 				console.log("\nPlot: " + JSON.parse(body) ["Plot"]);
 				console.log("\nIMDB Rating: " + JSON.parse(body) ["imdbRating"]);
 				console.log();
-				fs.appendFile('log.txt', "\nOMDB Log" + "\nTitle: " + JSON.parse(body) ["Title"] + "\nYear: " + JSON.parse(body) ["Year"] + "\nActors: " + JSON.parse(body) ["Actors"] + "\nPlot: " + JSON.parse(body) ["Plot"] + "\nIMDB Rating: " + JSON.parse(body) ["imdbRating"] "\n");
+				fs.appendFile('log.txt', "\nOMDB Log" + "\nTitle: " + JSON.parse(body) ["Title"] + "\nYear: " + JSON.parse(body) ["Year"] + "\nActors: " + JSON.parse(body) ["Actors"] + "\nPlot: " + JSON.parse(body) ["Plot"] + "\nIMDB Rating: " + JSON.parse(body) ["imdbRating"] + "\n");
 			} 
 		});
 	}; 
@@ -122,6 +113,14 @@ inquirer.prompt([
 	when: function(answers) {
 		return answers.choice === "Weather";
 	}
+}, 
+{
+	type: "input",
+	message: "What would you like to post on Twitter?",
+	name: "newTweet",
+	when: function(answers) {
+		return answers.choice === "Twitter";
+	}
 }
 ]).then(function (user) {
 	switch (user.choice) {
@@ -133,6 +132,9 @@ inquirer.prompt([
 			break;
 		case ("Weather"):
 			showWeather(user.zip);
+			break;
+		case ("Twitter") :
+			postTweet(user.newTweet);
 			break;
 	};
 });
