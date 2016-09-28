@@ -41,12 +41,12 @@ function showSong(song) {
 			return;
 		} 
 		else{
-			console.log("\nSong Name:" + data.tracks.items[0].name);
-			console.log("\nArtist:" + data.tracks.items[0].artists[0].name);
-			console.log("\nAlbum:" + data.tracks.items[0].album.name);
-			console.log("\nPreview Link:" + data.tracks.items[0].preview_url);
+			console.log("\nSong Name: " + data.tracks.items[0].name);
+			console.log("\nArtist: " + data.tracks.items[0].artists[0].name);
+			console.log("\nAlbum: " + data.tracks.items[0].album.name);
+			console.log("\nPreview Link: " + data.tracks.items[0].preview_url);
 			console.log();
-			fs.appendFile('log.txt', "\nSpotify Log" + "\nArtist:" + data.tracks.items[0].artists[0].name + "\n" + "Song Name:" + data.tracks.items[0].name + "\n" + "Album Name" + data.tracks.items[0].album.name + "\n" + "Preview Link:" + data.tracks.items[0].preview_url+ "\n");
+			fs.appendFile('log.txt', "\nSpotify Log" + "\nArtist: " + data.tracks.items[0].artists[0].name + "\n" + "Song Name: " + data.tracks.items[0].name + "\n" + "Album Name: " + data.tracks.items[0].album.name + "\n" + "Preview Link: " + data.tracks.items[0].preview_url+ "\n");
 		}
 	})
 }; 

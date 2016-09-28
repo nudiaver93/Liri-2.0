@@ -1,10 +1,3 @@
-
-Spotify Log
-Artist:The Weeknd
-Song Name:Starboy
-Album NameStarboy
-Preview Link:https://p.scdn.co/mp3-preview/8bc809d4e17a94526ff189e89dde0decc774a639
-
 Tweet Log
 Tweet: hello from the console, twitter!
 Created at: Wed Sep 28 2016 01:46:50 
@@ -73,3 +66,9 @@ Forcast in 77707
 
 Hangman Log
 User attempted to play hangman.
+
+Spotify Log
+Artist: The Weeknd
+Song Name: Starboy
+Album Name: Starboy
+Preview Link: https://p.scdn.co/mp3-preview/8bc809d4e17a94526ff189e89dde0decc774a639
