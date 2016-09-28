@@ -1,0 +1,1 @@
+exports.bank = ["Celtics", "Nets", "Knicks", "Sixers", "Raptors", "Mavericks", "Rockets", "Grizzlies", "Pelicans", "Spurs", "Bulls", "Cavaliers", "Pistons", "Pacers", "Bucks", "Nuggets", "Timberwolves", "Thunder", "Blazers", "Jazz", "Hawks", "Hornets", "Heat", "Magic", "Wizards", "Warriors", "Clippers", "Lakers", "Suns", "Kings"]

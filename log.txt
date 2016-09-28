@@ -1,75 +1,37 @@
 
-Weather log
-Forcast in 78705
-[
-  {
-    "low": "66",
-    "high": "76",
-    "skycodeday": "27",
-    "skytextday": "Cloudy",
-    "date": "2016-09-26",
-    "day": "Monday",
-    "shortday": "Mon",
-    "precip": ""
-  },
-  {
-    "low": "64",
-    "high": "79",
-    "skycodeday": "26",
-    "skytextday": "Cloudy",
-    "date": "2016-09-27",
-    "day": "Tuesday",
-    "shortday": "Tue",
-    "precip": "0"
-  },
-  {
-    "low": "65",
-    "high": "86",
-    "skycodeday": "32",
-    "skytextday": "Sunny",
-    "date": "2016-09-28",
-    "day": "Wednesday",
-    "shortday": "Wed",
-    "precip": "0"
-  },
-  {
-    "low": "60",
-    "high": "85",
-    "skycodeday": "32",
-    "skytextday": "Sunny",
-    "date": "2016-09-29",
-    "day": "Thursday",
-    "shortday": "Thu",
-    "precip": "0"
-  },
-  {
-    "low": "60",
-    "high": "81",
-    "skycodeday": "32",
-    "skytextday": "Sunny",
-    "date": "2016-09-30",
-    "day": "Friday",
-    "shortday": "Fri",
-    "precip": "0"
-  }
-]
+Spotify Log
+Artist:The Weeknd
+Song Name:Starboy
+Album NameStarboy
+Preview Link:https://p.scdn.co/mp3-preview/8bc809d4e17a94526ff189e89dde0decc774a639
+
+Tweet Log
+Tweet: hello from the console, twitter!
+Created at: Wed Sep 28 2016 01:46:50 
+
+OMDB Log
+Title: Finding Dory
+Year: 2016
+Actors: Ellen DeGeneres, Albert Brooks, Ed O'Neill, Kaitlin Olson
+Plot: The friendly but forgetful blue tang fish begins a search for her long-lost parents, and everyone learns a few things about the real meaning of family along the way.
+IMDB Rating: 7.8
 
 Weather log
-Forcast in 78759
+Forcast in 77707
 [
   {
-    "low": "64",
-    "high": "75",
+    "low": "70",
+    "high": "84",
     "skycodeday": "27",
-    "skytextday": "Cloudy",
+    "skytextday": "Mostly Cloudy",
     "date": "2016-09-26",
     "day": "Monday",
     "shortday": "Mon",
     "precip": ""
   },
   {
-    "low": "66",
-    "high": "77",
+    "low": "68",
+    "high": "86",
     "skycodeday": "28",
     "skytextday": "Mostly Cloudy",
     "date": "2016-09-27",
@@ -79,16 +41,16 @@ Forcast in 78759
   },
   {
     "low": "64",
-    "high": "88",
-    "skycodeday": "32",
-    "skytextday": "Sunny",
+    "high": "89",
+    "skycodeday": "34",
+    "skytextday": "Mostly Sunny",
     "date": "2016-09-28",
     "day": "Wednesday",
     "shortday": "Wed",
     "precip": "0"
   },
   {
-    "low": "60",
+    "low": "61",
     "high": "84",
     "skycodeday": "32",
     "skytextday": "Sunny",
@@ -98,8 +60,8 @@ Forcast in 78759
     "precip": "0"
   },
   {
-    "low": "61",
-    "high": "78",
+    "low": "59",
+    "high": "80",
     "skycodeday": "32",
     "skytextday": "Sunny",
     "date": "2016-09-30",
@@ -109,25 +71,5 @@ Forcast in 78759
   }
 ]
 
-Spotify Log
-Artist:Carly Rae Jepsen
-Song Name:Call Me Maybe
-Album NameKiss (Deluxe)
-Preview Link:https://p.scdn.co/mp3-preview/e21dcf8c62f839cc8d12d8d204453c71e1f71bea
-
-OMDB Log
-Title: Shrek 2
-Year: 2004
-Actors: Mike Myers, Eddie Murphy, Cameron Diaz, Julie Andrews
-Plot: Princess Fiona's parents invite her and Shrek to dinner to celebrate her marriage. If only they knew the newlyweds were both ogres.
-IMDB Rating: 7.2
-
-Spotify Log
-Artist:The Chainsmokers
-Song Name:Closer
-Album NameCloser
-Preview Link:https://p.scdn.co/mp3-preview/8d3df1c64907cb183bff5a127b1525b530992afb
-
-Tweet Log
-Tweet: I am testing app functionality through this tweet. 
-Created at: Wed Sep 28 2016 01:27:59 
+Hangman Log
+User attempted to play hangman.
