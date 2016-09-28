@@ -9,61 +9,6 @@ Actors: Ellen DeGeneres, Albert Brooks, Ed O'Neill, Kaitlin Olson
 Plot: The friendly but forgetful blue tang fish begins a search for her long-lost parents, and everyone learns a few things about the real meaning of family along the way.
 IMDB Rating: 7.8
 
-Weather log
-Forcast in 77707
-[
-  {
-    "low": "70",
-    "high": "84",
-    "skycodeday": "27",
-    "skytextday": "Mostly Cloudy",
-    "date": "2016-09-26",
-    "day": "Monday",
-    "shortday": "Mon",
-    "precip": ""
-  },
-  {
-    "low": "68",
-    "high": "86",
-    "skycodeday": "28",
-    "skytextday": "Mostly Cloudy",
-    "date": "2016-09-27",
-    "day": "Tuesday",
-    "shortday": "Tue",
-    "precip": "0"
-  },
-  {
-    "low": "64",
-    "high": "89",
-    "skycodeday": "34",
-    "skytextday": "Mostly Sunny",
-    "date": "2016-09-28",
-    "day": "Wednesday",
-    "shortday": "Wed",
-    "precip": "0"
-  },
-  {
-    "low": "61",
-    "high": "84",
-    "skycodeday": "32",
-    "skytextday": "Sunny",
-    "date": "2016-09-29",
-    "day": "Thursday",
-    "shortday": "Thu",
-    "precip": "0"
-  },
-  {
-    "low": "59",
-    "high": "80",
-    "skycodeday": "32",
-    "skytextday": "Sunny",
-    "date": "2016-09-30",
-    "day": "Friday",
-    "shortday": "Fri",
-    "precip": "0"
-  }
-]
-
 Hangman Log
 User attempted to play hangman.
 
@@ -72,3 +17,16 @@ Artist: The Weeknd
 Song Name: Starboy
 Album Name: Starboy
 Preview Link: https://p.scdn.co/mp3-preview/8bc809d4e17a94526ff189e89dde0decc774a639
+
+Weather log
+Forecast in: 77707
+{
+  "low": "67",
+  "high": "85",
+  "skycodeday": "28",
+  "skytextday": "Mostly Cloudy",
+  "date": "2016-09-27",
+  "day": "Tuesday",
+  "shortday": "Tue",
+  "precip": "0"
+}

@@ -73,10 +73,16 @@ function showWeather(zip) {
 		if (err) {
 			console.log(err);
 		}
-		// Make the response 
-		var response = JSON.stringify(result[0]["forecast"], null, 2);
+		// Make the response different if weekday or weekend
+		if (new Date().getDay() !==6 && new Date().getDay() !== 0){
+		var response = JSON.stringify(result[0]["forecast"][new Date().getDay() - 1], null, 2);
 		console.log(response);
-		fs.appendFile('log.txt', "\nWeather log" + "\nForcast in " + zip + "\n" + response + "\n")
+	}
+		else {
+		var response = JSON.stringify(result[0]["forecast"], null, 2);
+		console.log(response);			
+		}
+		fs.appendFile('log.txt', "\nWeather log" + "\nForecast in: " + zip + "\n" + response + "\n")
 	})
 
 } 
