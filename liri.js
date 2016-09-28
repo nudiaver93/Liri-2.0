@@ -2,7 +2,7 @@
 var fs = require('fs');
 
 // Require keys to access Twitter data
-var keys = require('./keys');
+var keys = require('./keys/keys');
 
 // Require necessary packages for app functionality
 var Twitter = require('twitter');
@@ -81,6 +81,9 @@ function showWeather(zip) {
 
 } 
 
+function game() {
+	console.log("\nThe Hangman functionality will be coming soon.\nGoodbye!\n")
+}
 console.log("Hello, and welcome to LIRI.")
 console.log("===========================")
 inquirer.prompt([
@@ -123,6 +126,14 @@ inquirer.prompt([
 	when: function(answers) {
 		return answers.choice === "Twitter";
 	}
+}, 
+{
+	type: "confirm",
+	message: "Would you like to play NBA hangman?",
+	name: "hangman",
+	when: function(answers) {
+		return answers.choice === "I want to play a game instead.";
+	}
 }
 ]).then(function (user) {
 	switch (user.choice) {
@@ -137,6 +148,11 @@ inquirer.prompt([
 			break;
 		case ("Twitter") :
 			postTweet(user.newTweet);
+			break;
+		case ("I want to play a game instead."):
+			if (user.hangman === true){
+				game();
+			}
 			break;
 	};
 });
