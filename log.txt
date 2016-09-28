@@ -127,3 +127,7 @@ Artist:The Chainsmokers
 Song Name:Closer
 Album NameCloser
 Preview Link:https://p.scdn.co/mp3-preview/8d3df1c64907cb183bff5a127b1525b530992afb
+
+Tweet Log
+Tweet: I am testing app functionality through this tweet. 
+Created at: Wed Sep 28 2016 01:27:59 

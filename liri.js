@@ -24,8 +24,10 @@ function postTweet(newTweet){
 
   		user.post('statuses/update', {status: newTweet}, function(error, tweet, response){
   			if (error) throw error;
-  			console.log("\nYour tweet '" + newTweet + "' was successfully posted on " + tweet["created_at"].substr(0, 11) + tweet["created_at"].substr(26, 4) + " " + tweet["created_at"].substr(11, 9));
-  		})
+  			var confirmation = "\nYour tweet, '" + newTweet + "', was successfully posted.";
+  			console.log(confirmation)
+  			fs.appendFile("log.txt", "\nTweet Log" + "\nTweet: " + newTweet + "\nCreated at: " + tweet["created_at"].substr(0, 11) + tweet["created_at"].substr(26, 4) + " " + tweet["created_at"].substr(11,9));
+  		})	
  };
 
 // Spotify functionality
