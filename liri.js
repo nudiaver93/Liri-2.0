@@ -74,7 +74,7 @@ function showWeather(zip) {
 			console.log(err);
 		}
 		// Make the response different if weekday or weekend
-		if (new Date().getDay() !==6 && new Date().getDay() !== 0){
+		if (new Date().getDay() !== 6 && new Date().getDay() !== 0){
 		var response = JSON.stringify(result[0]["forecast"][new Date().getDay() - 1], null, 2);
 		console.log(response);
 	}

@@ -30,3 +30,33 @@ Forecast in: 77707
   "shortday": "Tue",
   "precip": "0"
 }
+
+Spotify Log
+Artist: Kanye West
+Song Name: Champions
+Album Name: Champions
+Preview Link: https://p.scdn.co/mp3-preview/74d73f6f9ceeddac4dd88250dd5382b0a746b635
+
+Tweet Log
+Tweet: 8==D~~~
+Created at: Wed Sep 28 2016 20:09:38 
+
+OMDB Log
+Title: Pulp Fiction
+Year: 1994
+Actors: Tim Roth, Amanda Plummer, Laura Lovelace, John Travolta
+Plot: The lives of two mob hit men, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.
+IMDB Rating: 8.9
+
+Weather log
+Forecast in: 78705
+{
+  "low": "59",
+  "high": "83",
+  "skycodeday": "32",
+  "skytextday": "Sunny",
+  "date": "2016-09-29",
+  "day": "Thursday",
+  "shortday": "Thu",
+  "precip": "0"
+}
