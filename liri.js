@@ -73,31 +73,20 @@ function showWeather(zip) {
 		if (err) {
 			console.log(err);
 		}
-		// Make the response different if weekday or weekend
-		if (new Date().getDay() !== 6 && new Date().getDay() !== 0){
-		var response = JSON.stringify(result[0]["forecast"][new Date().getDay() - 1], null, 2);
-		console.log(response);
-	}
-		else {
-		var response = JSON.stringify(result[0]["forecast"], null, 2);
-		console.log(response);			
-		}
+		var response = 'Date: ' + result[0]["forecast"][1]["date"] + '\nStatus: ' + result[0]["forecast"][1]["skytextday"] + '\nLow: ' + result[0]["forecast"][1]["low"] + '\nHigh: ' + result[0]["forecast"][1]["high"] + '\nPrecipitation: ' + result[0]["forecast"][1]["precip"] + '\n';
+		console.log('\n' + response);			
 		fs.appendFile('log.txt', "\nWeather log" + "\nForecast in: " + zip + "\n" + response + "\n")
 	})
 
 } 
 
-function game() {
-	console.log("\nThe Hangman functionality will be coming soon.\nGoodbye!\n")
-	fs.appendFile("log.txt", "\nHangman Log" + "\nUser attempted to play hangman.\n")
-}
 console.log("Hello, and welcome to LIRI.")
 console.log("===========================")
 inquirer.prompt([
 {
 	type: "list",
 	message: "What app would you like to use?",
-	choices: ["Spotify", "Twitter", "Movie", "Weather", "I want to play a game instead."], 
+	choices: ["Spotify", "Twitter", "Movie", "Weather"], 
 	name: "choice"
 
 },
@@ -132,14 +121,6 @@ inquirer.prompt([
 	name: "newTweet",
 	when: function(answers) {
 		return answers.choice === "Twitter";
-	}
-}, 
-{
-	type: "confirm",
-	message: "Would you like to play NBA hangman?",
-	name: "hangman",
-	when: function(answers) {
-		return answers.choice === "I want to play a game instead.";
 	}
 }
 ]).then(function (user) {
