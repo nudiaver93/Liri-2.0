@@ -42,9 +42,9 @@ function showSong(song) {
 		} 
 		else{
 			console.log("\nSong Name: " + data.tracks.items[0].name);
-			console.log("\nArtist: " + data.tracks.items[0].artists[0].name);
-			console.log("\nAlbum: " + data.tracks.items[0].album.name);
-			console.log("\nPreview Link: " + data.tracks.items[0].preview_url);
+			console.log("Artist: " + data.tracks.items[0].artists[0].name);
+			console.log("Album: " + data.tracks.items[0].album.name);
+			console.log("Preview Link: " + data.tracks.items[0].preview_url);
 			console.log();
 			fs.appendFile('log.txt', "\nSpotify Log" + "\nArtist: " + data.tracks.items[0].artists[0].name + "\n" + "Song Name: " + data.tracks.items[0].name + "\n" + "Album Name: " + data.tracks.items[0].album.name + "\n" + "Preview Link: " + data.tracks.items[0].preview_url+ "\n");
 		}
