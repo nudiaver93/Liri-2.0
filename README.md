@@ -11,6 +11,7 @@
 <p>The first option is to use the Spotify application. Once this option is chosen, I am asked to input a song title to research. The application then utilizes the Spotify Node Package in order to retrieve song, artist and album information as well as a Spotify preview link.</p>
 <img src="assets/images/spotify.png" width="500px"/>
 <h3>Twitter: </h3>
+<p>The second option is the Twitter application. I am capable of posting on Twitter </p>
 <h3>Weather-JS: </h3>
 <h3>Request Package and OMDB: </h3>
 <h3>FS Package and Logging: </h3>
