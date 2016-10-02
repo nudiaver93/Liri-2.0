@@ -12,15 +12,15 @@
 <h3>Spotify: </h3>
 <br>
 <p>The first option is to invoke the Spotify application. Once this option is chosen, I am asked to input a song title to research. The application then utilizes the Spotify Node Package in order to retrieve song, artist and album information as well as a Spotify preview link.</p>
-<img src="assets/images/spotify.png" width="60%"/>
+<img src="assets/images/spotify.png" width="90%"/>
 <br>
 <hr>
 <h3>Twitter: </h3>
 <br>
 <p>The second option is the Twitter application. While the original assignment was to retrieve the most recent 10 tweets from my profile, I decided to go a different route with Twitter in this version. I have programmed a post route that now allows me to post any Tweet I want directly from the console! This is a feature that I actively researched the Twitter Node Package documentation for and is probably my favorite function of the entire app. </p>
 <br>
-<img src="assets/images/twitter1.png" width="40%" style="float: left"/>
-<img src="assets/images/twitter2.png" width="40%" style="float: left"/>
+<img src="assets/images/twitter1.png" width="80%"/>
+<img src="assets/images/twitter2.png" width="80%"/>
 <br>
 <hr>
 <h3>Weather-JS: </h3>
@@ -34,13 +34,13 @@
 <br>
 <p>When the movie option is chosen, I am prompted to submit a movie title to research. This aspect of the application uses the node request package in order to return actor, plot and release date information online from the OMDB website. While this option is largely the same from the original application, I once again used inquirer to improve the UI of the application.</p>
 <br>
-<img src="assets/images/omdb.png" width="60%"/>
+<img src="assets/images/omdb.png" width="80%"/>
 <br>
 <hr>
 <h3>FS Package and Logging: </h3>
 <br>
 <p>Using the fs package, I log all actions performed by the user into a log.txt file. This is to track what the application is used for as well as to store data that I have researched in the past. </p>
 <br>
-<img src="assets/images/log.png" width="60%"/>
+<img src="assets/images/log.png" width="80%"/>
 <br>
 <hr>
