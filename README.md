@@ -19,7 +19,7 @@
 <br>
 <p>The second option is the Twitter application. While the original assignment was to retrieve the most recent 10 tweets from my profile, I decided to go a different route with Twitter in this version. I have programmed a post route that now allows me to post any Tweet I want directly from the console! This is a feature that I actively researched the Twitter Node Package documentation for and is probably my favorite function of the entire app. </p>
 <br>
-<img src="assets/images/twitter1.png" width="80%"/>
+<img src="assets/images/twitter1.png" width="100%"/>
 <img src="assets/images/twitter2.png" width="80%"/>
 <br>
 <hr>
@@ -27,7 +27,7 @@
 <br>
 <p>Weather-JS was also not a part of the original LIRI assignment. I really wanted to add it as an application feature as it was the first Node package I had learned to successfully install and dissect. Seeing how simple it was to pull such useful information such as weather sparked a passion to continue learning and studying the back end of web development. With Weather-JS, the user inputs a zip code and the package returns weather information for that zip code on that particular day.</p>
 <br>
-<img src="assets/images/weather.png" width="60%"/>
+<img src="assets/images/weather.png" width="70%"/>
 <br>
 <hr>
 <h3>Request Package and OMDB: </h3>
