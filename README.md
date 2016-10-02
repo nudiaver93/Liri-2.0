@@ -34,7 +34,7 @@
 <br>
 <p>When the movie option is chosen, I am prompted to submit a movie title to research. This aspect of the application uses the node request package in order to return actor, plot and release date information online from the OMDB website. While this option is largely the same from the original application, I once again used inquirer to improve the UI of the application.</p>
 <br>
-<img src="assets/images/omdb.png" width="400px"/>
+<img src="assets/images/omdb.png" width="600px"/>
 <br>
 <hr>
 <h3>FS Package and Logging: </h3>
