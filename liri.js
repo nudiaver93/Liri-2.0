@@ -57,10 +57,10 @@ function showMovie(movieTitle) {
 		request(OMDB, function(error, response, body) {
 			if (!error && response.statusCode == 200) {
 				console.log("\nTitle: " + JSON.parse(body) ["Title"]);
-				console.log("\nYear: " + JSON.parse(body) ["Year"]);
-				console.log("\nActors: " + JSON.parse(body) ["Actors"]);
-				console.log("\nPlot: " + JSON.parse(body) ["Plot"]);
-				console.log("\nIMDB Rating: " + JSON.parse(body) ["imdbRating"]);
+				console.log("Year: " + JSON.parse(body) ["Year"]);
+				console.log("Actors: " + JSON.parse(body) ["Actors"]);
+				console.log("Plot: " + JSON.parse(body) ["Plot"]);
+				console.log("IMDB Rating: " + JSON.parse(body) ["imdbRating"]);
 				console.log();
 				fs.appendFile('log.txt', "\nOMDB Log" + "\nTitle: " + JSON.parse(body) ["Title"] + "\nYear: " + JSON.parse(body) ["Year"] + "\nActors: " + JSON.parse(body) ["Actors"] + "\nPlot: " + JSON.parse(body) ["Plot"] + "\nIMDB Rating: " + JSON.parse(body) ["imdbRating"] + "\n");
 			} 

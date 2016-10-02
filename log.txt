@@ -1,14 +1,30 @@
 
+
 Spotify Log
 Artist: Rick Astley
 Song Name: Never Gonna Give You Up
 Album Name: Whenever You Need Somebody
 Preview Link: https://p.scdn.co/mp3-preview/22bf10aff02db272f0a053dff5c0063d729df988
 
+Tweet Log
+Tweet: I am posting this Tweet from the console in order to test application functionality. 
+Created at: Sun Oct 02 2016 02:52:15 
+
 Weather log
 Forecast in: 78705
-Date: 2016-09-30
+Date: 2016-10-02
 Status: Sunny
-Low: 59
-High: 82
+Low: 63
+High: 85
 Precipitation: 0
+
+OMDB Log
+Title: The Shawshank Redemption
+Year: 1994
+Actors: Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler
+Plot: Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.
+IMDB Rating: 9.3
+
+
+
+
